@@ -1,0 +1,15 @@
+#
+# The two letter codes are defined by ISO 639-1
+# http://en.wikipedia.org/wiki/List_of_ISO_639_codes
+
+SCREENSAVER_ALARMSAVERS
+	EN	Alarm screensavers
+
+SCREENSAVER_ALARMSAVERS_SETTINGS
+	EN	Alarm screensavers
+
+SCREENSAVER_ALARMSAVERS_SETTINGS_NONE
+	EN	Alarm Snooze Window
+
+SCREENSAVER_ALARMSAVERS_SETTINGS_NOT_PATCHED
+	EN	Required patch not installed, use Patch Installer to install "Custom alarm window" patch

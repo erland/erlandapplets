@@ -1,0 +1,57 @@
+#
+# The two letter codes are defined by ISO 639-1
+# http://en.wikipedia.org/wiki/List_of_ISO_639_codes
+
+SETTINGSREMOVER
+	EN	Settings Remover
+
+SETTINGSREMOVER_APPLET_SETTINGS
+	EN	Applet Settings
+
+SETTINGSREMOVER_APPLET_SETTINGS_DESC
+	EN	Deleting applet settings will restore the specific applet to its default settings
+
+SETTINGSREMOVER_PATCH_INSTALLER
+	EN	Patch Installer
+
+SETTINGSREMOVER_PATCH_INSTALLER_DESC
+	EN	Deleting installed patches will still leave the patch applied. Should only be used as an emergency solution.
+
+SETTINGSREMOVER_CUSTOMCLOCK_FONTS
+	EN	Custom Clock fonts
+
+SETTINGSREMOVER_CUSTOMCLOCK_FONTS_DESC
+	EN	Downloaded Custom Clock fonts, delete to free storage space
+
+SETTINGSREMOVER_SCREENSHOTS
+	EN	Screenshots
+
+SETTINGSREMOVER_SCREENSHOTS_DESC
+	EN	Available screenshots, delete to free storage space 
+
+SETTINGSREMOVER_WALLPAPERS
+	EN	Custom wallpapers
+
+SETTINGSREMOVER_WALLPAPERS_DESC
+	EN	Available custom wallpapers
+
+SETTINGSREMOVER_WARN
+	EN	Be careful!\nThis will completely remove selected setting files/directories
+
+SETTINGSREMOVER_RESTART_APP
+	EN	Please Restart
+
+RESTART_JIVE
+	EN	Restarting...
+
+SETTINGSREMOVER_REMOVE
+	EN	Delete
+
+SETTINGSREMOVER_REMOVE_DIRECTORY
+	EN	Do you want to delete the directory and all it contents ?\n%s
+
+SETTINGSREMOVER_REMOVE_FILE
+	EN	Do you want to delete the file ?\n%s
+
+SETTINGSREMOVER_NONE_FOUND
+	EN	No files found

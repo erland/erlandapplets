@@ -134,6 +134,16 @@ function partialResetMenu(self, menuItem, action)
 			})
 	end
 
+	if lfs.attributes(self.luadir.."share/jive/applets/CustomClock/images") then
+		self.menu:addItem({
+				text = self:string("SETTINGSREMOVER_CUSTOMCLOCK_IMAGES"),
+				callback = function(object, menuItem)
+						self:openSettingsDirectory(menuItem,self.luadir.."share/jive/applets/CustomClock/images",nil,nil,self:string("SETTINGSREMOVER_CUSTOMCLOCK_IMAGES_DESC"))
+						return EVENT_CONSUME
+					end
+			})
+	end
+
 	self.window:addListener(EVENT_WINDOW_POP, function()
 		if self.needsReset then
 			self:_reboot()

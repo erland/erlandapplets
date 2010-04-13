@@ -23,6 +23,12 @@ SETTINGSREMOVER_CUSTOMCLOCK_FONTS
 SETTINGSREMOVER_CUSTOMCLOCK_FONTS_DESC
 	EN	Downloaded Custom Clock fonts, delete to free storage space
 
+SETTINGSREMOVER_CUSTOMCLOCK_IMAGES
+	EN	Custom Clock images
+
+SETTINGSREMOVER_CUSTOMCLOCK_IMAGES_DESC
+	EN	Cached Custom Clock images, delete to free storage space
+
 SETTINGSREMOVER_SCREENSHOTS
 	EN	Screenshots
 

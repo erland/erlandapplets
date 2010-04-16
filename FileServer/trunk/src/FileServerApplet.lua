@@ -32,6 +32,7 @@ local Framework        = require("jive.ui.Framework")
 
 local lfs              = require("lfs")
 local mime             = require("mime")
+local math             = require("math")
 
 local appletManager    = appletManager
 local jiveMain         = jiveMain
@@ -56,9 +57,10 @@ function notify_playerCurrent(self,player)
 		'/slim/fileserver.dir',
 		function(chunk)
 			local server = chunk.data[2]
-			if server == System:getMacAddress() then
-				local handle = chunk.data[3]
-				local dir = chunk.data[4]
+			local secret = chunk.data[3]
+			if server == System:getMacAddress() and secret == self.secret then
+				local handle = chunk.data[4]
+				local dir = chunk.data[5]
 				local server = player:getSlimServer()
 				log:debug("Getting files for "..tostring(dir))
 				local subdirs = lfs.dir(dir)
@@ -109,9 +111,10 @@ function notify_playerCurrent(self,player)
 		'/slim/fileserver.get',
 		function(chunk)
 			local server = chunk.data[2]
-			if server == System:getMacAddress() then
-				local handle = chunk.data[3]
-				local filename = chunk.data[4]
+			local secret = chunk.data[3]
+			if server == System:getMacAddress() and secret == self.secret then
+				local handle = chunk.data[4]
+				local filename = chunk.data[5]
 				if lfs.attributes(filename) then
 					log:debug("Getting file: "..tostring(filename))
 					local file = io.open(filename,"rb")
@@ -138,6 +141,8 @@ function notify_playerCurrent(self,player)
 end
 
 function notify_serverConnected(self,server)
+	math.randomseed(os.time())
+	self.secret = tostring(math.random(1000000))
 	server:userRequest(function(chunk,err)
 				if err then
 					log:warn(err)
@@ -148,7 +153,7 @@ function notify_serverConnected(self,server)
 							end
 						end,
 						player and player:getId(),
-						{'fileserver','register',System:getMacAddress(),System:getMachine()}
+						{'fileserver','register',System:getMacAddress(),System:getMachine(),self.secret}
 					)
 				end
 		end,

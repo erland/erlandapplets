@@ -109,6 +109,45 @@ function dirCommand(self,params)
 	return result
 end
 
+function appletsCommand(self,params)
+
+	local no = 1
+	local applets = {}
+        -- Find all applets/* directories on lua path
+        for dir in package.path:gmatch("([^;]*)%?[^;]*;") do repeat
+        
+                dir = dir .. "applets"
+                log:debug("..in ", dir)
+                
+                local mode = lfs.attributes(dir, "mode")
+                if mode ~= "directory" then
+                        break
+                end
+
+                for entry in lfs.dir(dir) do repeat
+                        local entrydir = dir .. "/" .. entry
+                        local entrymode = lfs.attributes(entrydir, "mode")
+
+                        if entry:match("^%.") or entrymode ~= "directory" then
+                                break
+                        end
+
+                        local metamode = lfs.attributes(entrydir  .. "/" .. entry .. "Meta.lua", "mode")
+                        if metamode == "file" then
+                                applets[no] = {
+					applet = entry
+				}
+				no = no + 1
+                        end
+                until true end
+        until true end
+
+	local result = {
+		applets = applets
+	}
+	return result
+end
+
 function hasAppletCommand(self,params)
 	local applet = params.applet
 	local installed = appletManager:hasApplet(applet)

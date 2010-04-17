@@ -47,6 +47,7 @@ function configureApplet(self)
 	appletManager:callService("squeezePlayAdminDispatch","getprefs","SqueezePlayAdmin","getPrefsCommand")
 --	appletManager:callService("squeezePlayAdminDispatch","setpref","SqueezePlayAdmin","setPrefCommand")
 	appletManager:callService("squeezePlayAdminDispatch","hasapplet","SqueezePlayAdmin","hasAppletCommand")
+	appletManager:callService("squeezePlayAdminDispatch","applets","SqueezePlayAdmin","appletsCommand")
 end
 
 function defaultSettings(self)

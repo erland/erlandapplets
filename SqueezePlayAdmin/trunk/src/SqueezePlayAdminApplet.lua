@@ -274,7 +274,7 @@ function subscribeToCommand(self,server,cmd)
 				sbs = self.servers[secret]
 				log:debug("Got server for "..secret..": "..tostring(sbs))
 			else
-				log:warn("Unknown server with secret: "..secret)
+				log:debug("Unknown server with secret: "..secret)
 			end
 			if server == System:getMacAddress() and sbs then
 				local handle = chunk.data[4]
@@ -295,7 +295,7 @@ function subscribeToCommand(self,server,cmd)
 					)
 				end
 			elseif not sbs then
-				log:warn("Got invalid secret in "..cmd.." command to "..server)
+				log:debug("Got invalid secret in "..cmd.." command to "..server)
 			end
 		end,
 		nil,

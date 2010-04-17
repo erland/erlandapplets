@@ -126,11 +126,26 @@ function getCommand(self,params)
 	return nil
 end
 
+function notify_serverDisconnected(self,server, noOfRetries)
+	if self.servers then
+		local oldSecret = nil
+		for key,entry in pairs(self.servers) do
+			if tostring(entry) == tostring(server) then
+				oldSecret = key
+			end
+		end
+		if oldSecret then
+			log:debug("Removing old secret: "..oldSecret)
+			self.servers[oldSecret] = nil
+		end
+	end
+end
+
 function notify_serverConnected(self,server)
 	server:userRequest(function(chunk,err)
 				if err then
 					log:warn(err)
-				else
+				elseif tonumber(chunk.data["_can"]) == 1 then
 					local secret = tostring(math.random(1000000))
 					if not self.servers then
 						self.servers = {}
@@ -156,6 +171,8 @@ function notify_serverConnected(self,server)
 							self:subscribeToCommand(server,cmd)
 						end
 					end
+				else
+					log:debug("Ignoring "..tostring(server)..", doesn't support squeezeplayadmin commands")
 				end
 		end,
 		nil,

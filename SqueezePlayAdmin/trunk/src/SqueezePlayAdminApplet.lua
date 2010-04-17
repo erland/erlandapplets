@@ -109,6 +109,47 @@ function dirCommand(self,params)
 	return result
 end
 
+function hasAppletCommand(self,params)
+	local applet = params.applet
+	local installed = appletManager:hasApplet(applet)
+	local value = {
+		value = installed
+	}
+	return value
+end
+
+function getPrefsCommand(self,params)
+	local applet = params.applet
+	local instance = appletManager:loadApplet(applet)
+	local value = instance["getSettings"](instance)
+	return value
+end
+
+function getPrefCommand(self,params)
+	local applet = params.applet
+	local pref = params.pref
+	local instance = appletManager:loadApplet(applet)
+	local value = instance["getSettings"](instance)[pref]
+	local result = {
+		value = value
+	}
+	return result
+end
+
+function setPrefCommand(self,params)
+	local applet = params.applet
+	local pref = params.pref
+	local value = params.value
+
+	local instance = appletManager:loadApplet(applet)
+	instance["getSettings"](instance)[pref] = value
+	instance["storeSettings"](instance)
+	local result = {
+		value = value
+	}
+	return result
+end
+
 function getCommand(self,params)
 	local filename = params.file
 	if lfs.attributes(filename) then
@@ -185,6 +226,7 @@ function subscribeToCommand(self,server,cmd)
 	server.comet:subscribe(
 		'/slim/squeezeplayadmin.'..cmd,
 		function(chunk)
+			local cmd = string.gsub(chunk.data[1],"^squeezeplayadmin.","")
 			log:debug("Got callback for "..cmd)
 			local server = chunk.data[2]
 			local secret = chunk.data[3]

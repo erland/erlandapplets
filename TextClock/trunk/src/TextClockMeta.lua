@@ -36,8 +36,6 @@ function jiveVersion(self)
 end
 
 function registerApplet(self)
-	jiveMain:addItem(self:menuItem('appletExtrasTextClock', 'extras', "SCREENSAVER_TEXTCLOCK", function(applet, ...) applet:openMenu(...) end, 900))
-
 end
 
 function configureApplet(self)

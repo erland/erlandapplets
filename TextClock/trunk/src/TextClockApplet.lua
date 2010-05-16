@@ -30,6 +30,8 @@ local Applet           = require("jive.Applet")
 local Window           = require("jive.ui.Window")
 local Group            = require("jive.ui.Group")
 local Label            = require("jive.ui.Label")
+local SimpleMenu       = require("jive.ui.SimpleMenu")
+local Checkbox         = require("jive.ui.Checkbox")
 local Font             = require("jive.ui.Font")
 local Framework        = require("jive.ui.Framework")
 local Timer            = require("jive.ui.Timer")
@@ -84,6 +86,29 @@ function openMenu(self)
 	self.window:show(Window.transitionFadeIn)
 end
 
+function openSettings(self)
+	log:debug("Text Clock settings")
+	local width,height = Framework.getScreenSize()
+
+	local window = Window("text_list", self:string("SCREENSAVER_TEXTCLOCK_SETTINGS"), 'settingstitle')
+	local menu = SimpleMenu("menu")
+	menu:addItem({
+		text = self:string("SCREENSAVER_TEXTCLOCK_SETTINGS_SINGLEROW"), 
+		style = 'item_choice',
+		check = Checkbox(
+			"checkbox",
+			function(object, isSelected)
+				self:getSettings()["singlerow"] = isSelected
+				self:storeSettings()
+			end,
+			self:getSettings()["singlerow"]
+		)
+	})
+	window:addWidget(menu)
+	self:tieAndShowWindow(window)
+	return window
+
+end
 
 function closeScreensaver(self)
 	if self.window then
@@ -93,8 +118,8 @@ function closeScreensaver(self)
 end
 
 function _tick(self)
-	self.timewidget:setWidgetValue("label",self:_getTextTime(self:getSettings()["single"]))
-	local date = os.date(DateTime.getDateFormat(),5*math.floor(os.time()/5 + 0.5)+150)
+	self.timewidget:setWidgetValue("label",self:_getTextTime(self:getSettings()["singlerow"]))
+	local date = self:_getLocalizedDateInfo(5*math.floor(os.time()/5 + 0.5)+150,DateTime.getDateFormat())
 	self.datewidget:setWidgetValue("label",date)
 end
 
@@ -140,6 +165,40 @@ function _loadFont(self,font,fontSize)
         return Font:load(font, fontSize)
 end
 
+function _getLocalizedDateInfo(self,time,text)
+	local weekday = os.date("%w",time)
+	local month = os.date("%m",time)
+	if text and string.find(text,"%%A") then
+		text = string.gsub(text,"%%A",tostring(self:string("WEEKDAY_"..weekday)))
+	end
+	if text and string.find(text,"%%a") then
+		text = string.gsub(text,"%%a",tostring(self:string("WEEKDAY_SHORT_"..weekday)))
+	end
+	if text and string.find(text,"%%B") then
+		text = string.gsub(text,"%%B",tostring(self:string("MONTH_"..month)))
+	end
+	if text and string.find(text,"%%b") then
+		text = string.gsub(text,"%%b",tostring(self:string("MONTH_SHORT_"..month)))
+	end
+	if text and string.find(text,"%%H1") then
+		local hour = os.date("%H",time)
+		text = string.gsub(text,"%%H1",tostring(tonumber(hour)))
+	end
+	if text and string.find(text,"%%I1") then
+		local hour = os.date("%I",time)
+		text = string.gsub(text,"%%I1",tostring(tonumber(hour)))
+	end
+	if text and string.find(text,"%%m1") then
+		local month = os.date("%m",time)
+		text = string.gsub(text,"%%m1",tostring(tonumber(month)))
+	end
+	if text and string.find(text,"%%d1") then
+		local month = os.date("%d",time)
+		text = string.gsub(text,"%%d1",tostring(tonumber(month)))
+	end
+	text = os.date(text,time)
+	return text
+end
 
 function _getClockSkin(self,skin)
 	local s = {}
@@ -159,7 +218,7 @@ function _getClockSkin(self,skin)
 		self.model = System:getMachine()
 	end
 
-	if self:getSettings()["single"] then	
+	if self:getSettings()["singlerow"] then	
 		if self.model == "baby" then
 			dateFontSize = 20
 			timeFontSize = 30

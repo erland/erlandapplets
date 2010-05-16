@@ -45,9 +45,9 @@ function configureApplet(self)
 		self:string("SCREENSAVER_TEXTCLOCK"), 
 		"TextClock",
 		"openMenu", 
-		self:string("SCREENSAVER_TEXTCLOCK"), 
+		self:string("SCREENSAVER_TEXTCLOCK_SETTINGS"), 
 		"openSettings", 
-		90,
+		nil,
 		"closeScreensaver")
         appletManager:callService("addCustomClockTextType","texttime","TextClock","getCustomClockTextTime")
 end

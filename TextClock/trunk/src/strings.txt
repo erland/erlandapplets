@@ -1,0 +1,423 @@
+SCREENSAVER_TEXTCLOCK
+	EN	Text Clock
+	
+SCREENSAVER_TEXTCLOCK_TIME_0
+	DE	%s Uhr
+	EN	%s o'clock
+	ES	%s
+	FR	%s
+	NL	%s uur
+	SV	Klockan  är  %s
+
+SCREENSAVER_TEXTCLOCK_TIME_5
+	DE	Fünf nach %s
+	EN	five past %s
+	ES	%s y cinco
+	FR	%s et cinq
+	NL	Vijf over %s
+	SV	Fem  över  %s
+
+SCREENSAVER_TEXTCLOCK_TIME_10
+	DE	Zehn nach %s
+	EN	ten past %s
+	ES	%s y diez
+	FR	%s et dix
+	NL	Tien over %s
+	SV	Tio  över  %s
+
+SCREENSAVER_TEXTCLOCK_TIME_15
+	DE	Viertel nach %s
+	EN	quarter past %s
+	ES	%s y cuarto
+	FR	%s et quart
+	NL	Kwart over %s
+	SV	Kvart  över  %s
+
+SCREENSAVER_TEXTCLOCK_TIME_20
+	DE	Zwanzig nach %s
+	EN	twenty past %s
+	ES	%s y veinte
+	FR	%s et vingt
+	NL	Twintig over %s
+	SV	Tjugo  över  %s
+
+SCREENSAVER_TEXTCLOCK_TIME_25
+	DE	Fünf vor halb %s
+	EN	twenty five past %s
+	ES	%s y veinticinco
+	FR	%s et vingt-cinq
+	NL	Vijf voor half %s
+	SV	Fem  i  halv  %s
+
+SCREENSAVER_TEXTCLOCK_TIME_30
+	DE	Halb %s
+	EN	half past %s
+	ES	%s y media
+	FR	%s et demi
+	NL	Half %s
+	SV	Halv  %s
+
+SCREENSAVER_TEXTCLOCK_TIME_35
+	DE	Fünf nach halb %s
+	EN	twenty five to %s
+	ES	%s menos veinticinco
+	FR	%s moins vingt-cinq
+	NL	Vijf over half %s
+	SV	Fem  över  halv  %s
+
+SCREENSAVER_TEXTCLOCK_TIME_40
+	DE	Zwanzig vor %s
+	EN	twenty to %s
+	ES	%s menos veinte
+	FR	%s moins vingt
+	NL	Twintig voor %s
+	SV	Tjugo  i  %s
+
+SCREENSAVER_TEXTCLOCK_TIME_45
+	DE	Viertel vor %s
+	EN	quarter to %s
+	ES	%s menos cuarto
+	FR	%s moins quart
+	NL	Kwart voor %s
+	SV	Kvart  i  %s
+
+SCREENSAVER_TEXTCLOCK_TIME_50
+	DE	Zehn vor %s
+	EN	ten to %s
+	ES	%s menos diez
+	FR	%s moins dix
+	NL	Tien voor %s
+	SV	Tio  i  %s
+
+SCREENSAVER_TEXTCLOCK_TIME_55
+	DE	Fünf vor %s
+	EN	five to %s
+	ES	%s menos cinco
+	FR	%s moins cinq
+	NL	Vijf voor %s
+	SV	Fem  i  %s
+
+SCREENSAVER_TEXTCLOCK_MULTIROW_TIME_0
+	DE	%s\nUhr
+	EN	%s\no'clock
+	ES	%s
+	FR	%s
+	NL	%s\nuur
+	SV	%s
+
+SCREENSAVER_TEXTCLOCK_MULTIROW_TIME_5
+	DE	Fünf\nnach\n%s
+	EN	five\npast\n%s
+	ES	%s\ny\ncinco
+	FR	%s\net\ncinq
+	NL	Vijf\nover\n%s
+	SV	Fem\növer\n%s
+
+SCREENSAVER_TEXTCLOCK_MULTIROW_TIME_10
+	DE	Zehn\nnach\n%s
+	EN	ten\npast\n%s
+	ES	%s\ny\ndiez
+	FR	%s\net\ndix
+	NL	Tien\nover\n%s
+	SV	Tio\növer\n%s
+
+SCREENSAVER_TEXTCLOCK_MULTIROW_TIME_15
+	DE	Viertel\nnach\n%s
+	EN	quarter\npast\n%s
+	ES	%s\ny\ncuarto
+	FR	%s\net\nquart
+	NL	Kwart\nover\n%s
+	SV	Kvart\növer\n%s
+
+SCREENSAVER_TEXTCLOCK_MULTIROW_TIME_20
+	DE	Zwanzig\nnach\n%s
+	EN	twenty\npast\n%s
+	ES	%s\ny\nveinte
+	FR	%s\net\nvingt
+	NL	Twintig\nover\n%s
+	SV	Tjugo\növer\n%s
+
+SCREENSAVER_TEXTCLOCK_MULTIROW_TIME_25
+	DE	Fünf\nvor\nhalb %s
+	EN	twenty five\npast\n%s
+	ES	%s\ny\nveinticinco
+	FR	%s\net\nvingt-cinq
+	NL	Vijf\nvoor\nhalf %s
+	SV	Fem\ni\nhalv  %s
+
+SCREENSAVER_TEXTCLOCK_MULTIROW_TIME_30
+	DE	Halb %s
+	EN	half\npast\n%s
+	ES	%s\ny\nmedia
+	FR	%s\net\ndemi
+	NL	Half %s
+	SV	Halv  %s
+
+SCREENSAVER_TEXTCLOCK_MULTIROW_TIME_35
+	DE	Fünf\nnach\nhalb %s
+	EN	twenty five\nto\n%s
+	ES	%s\nmenos\nveinticinco
+	FR	%s\nmoins\nvingt-cinq
+	NL	Vijf\nover half\n%s
+	SV	Fem\növer\nhalv  %s
+
+SCREENSAVER_TEXTCLOCK_MULTIROW_TIME_40
+	DE	Zwanzig\nvor\n%s
+	EN	twenty\nto\n%s
+	ES	%s\nmenos\nveinte
+	FR	%s\nmoins\nvingt
+	NL	Twintig\nvoor\n%s
+	SV	Tjugo\ni\n%s
+
+SCREENSAVER_TEXTCLOCK_MULTIROW_TIME_45
+	DE	Viertel\nvor\n%s
+	EN	quarter\nto\n%s
+	ES	%s\nmenos\ncuarto
+	FR	%s\nmoins\nquart
+	NL	Kwart\nvoor\n%s
+	SV	Kvart\ni\n%s
+
+SCREENSAVER_TEXTCLOCK_MULTIROW_TIME_50
+	DE	Zehn\nvor\n%s
+	EN	ten\nto\n%s
+	ES	%s\nmenos\ndiez
+	FR	%s\nmoins\ndix
+	NL	Tien\nvoor\n%s
+	SV	Tio\ni\n%s
+
+SCREENSAVER_TEXTCLOCK_MULTIROW_TIME_55
+	DE	Fünf\nvor\n%s
+	EN	five\nto\n%s
+	ES	%s\nmenos\ncinco
+	FR	%s\nmoins\ncinq
+	NL	Vijf\nvoor\n%s
+	SV	Fem\ni\n%s
+
+# The *_CORR values define, by how many hours you want the clock to be adjusted
+# This is mainly important around 30 minutes: In German we say "half nine" while English is "half past eight" at 8h30.
+# You can therefore have the hour increased by one.
+SCREENSAVER_TEXTCLOCK_TIME_0_CORR
+	DE	0
+	EN	0
+	ES	0
+	FR	0
+	NL	0
+	SV	0
+
+SCREENSAVER_TEXTCLOCK_TIME_5_CORR
+	DE	0
+	EN	0
+	ES	0
+	FR	0
+	NL	0
+	SV	0
+
+SCREENSAVER_TEXTCLOCK_TIME_10_CORR
+	DE	0
+	EN	0
+	ES	0
+	FR	0
+	NL	0
+	SV	0
+
+SCREENSAVER_TEXTCLOCK_TIME_15_CORR
+	DE	0
+	EN	0
+	ES	0
+	FR	0
+	NL	0
+	SV	0
+
+SCREENSAVER_TEXTCLOCK_TIME_20_CORR
+	DE	0
+	EN	0
+	ES	0
+	FR	0
+	NL	0
+	SV	0
+
+SCREENSAVER_TEXTCLOCK_TIME_25_CORR
+	DE	1
+	EN	0
+	ES	0
+	FR	0
+	NL	1
+	SV	1
+
+SCREENSAVER_TEXTCLOCK_TIME_30_CORR
+	DE	1
+	EN	0
+	ES	0
+	FR	0
+	NL	1
+	SV	1
+
+SCREENSAVER_TEXTCLOCK_TIME_35_CORR
+	DE	0
+	EN	1
+	ES	0
+	FR	0
+	NL	0
+	SV	0
+
+SCREENSAVER_TEXTCLOCK_TIME_40_CORR
+	DE	0
+	EN	1
+	ES	0
+	FR	0
+	NL	0
+	SV	0
+
+SCREENSAVER_TEXTCLOCK_TIME_45_CORR
+	DE	0
+	EN	1
+	ES	0
+	FR	0
+	NL	0
+	SV	0
+
+SCREENSAVER_TEXTCLOCK_TIME_50_CORR
+	DE	0
+	EN	1
+	ES	0
+	FR	0
+	NL	0
+	SV	0
+
+SCREENSAVER_TEXTCLOCK_TIME_55_CORR
+	DE	0
+	EN	1
+	ES	0
+	FR	0
+	NL	0
+	SV	0
+
+SCREENSAVER_TEXTCLOCK_TIME_1H
+	DE	Eins
+	EN	one
+	ES	la una
+	FR	une heure
+	NL	Een
+	SV	ett
+
+SCREENSAVER_TEXTCLOCK_TIME_2H
+	DE	Zwei
+	EN	two
+	ES	las dos
+	FR	deux heures
+	NL	Twee
+	SV	två
+
+SCREENSAVER_TEXTCLOCK_TIME_3H
+	DE	Drei
+	EN	three
+	ES	las tres
+	FR	trois heures
+	NL	Drie
+	SV	tre
+
+SCREENSAVER_TEXTCLOCK_TIME_4H
+	DE	Vier
+	EN	four
+	ES	las cuatro
+	FR	quatre heures
+	NL	Vier
+	SV	fyra
+
+SCREENSAVER_TEXTCLOCK_TIME_5H
+	DE	Fünf
+	EN	five
+	ES	las cinco
+	FR	cinq heures
+	NL	Vijf
+	SV	fem
+
+SCREENSAVER_TEXTCLOCK_TIME_6H
+	DE	Sechs
+	EN	six
+	ES	las seis
+	FR	six heures
+	NL	Zes
+	SV	sex
+
+SCREENSAVER_TEXTCLOCK_TIME_7H
+	DE	Sieben
+	EN	seven
+	ES	las siete
+	FR	sept heures
+	NL	Zeven
+	SV	sju
+
+SCREENSAVER_TEXTCLOCK_TIME_8H
+	DE	Acht
+	EN	eight
+	ES	las ocho
+	FR	huit heures
+	NL	Acht
+	SV	åtta
+
+SCREENSAVER_TEXTCLOCK_TIME_9H
+	DE	Neun
+	EN	nine
+	ES	las nueve
+	FR	neuf heures
+	NL	Negen
+	SV	nio
+
+SCREENSAVER_TEXTCLOCK_TIME_10H
+	DE	Zehn
+	EN	ten
+	ES	las diez
+	FR	dix heures
+	NL	Tien
+	SV	tio
+
+SCREENSAVER_TEXTCLOCK_TIME_11H
+	DE	Elf
+	EN	eleven
+	ES	las once
+	FR	onze heures
+	NL	Elf
+	SV	elva.
+
+SCREENSAVER_TEXTCLOCK_TIME_12H
+	DE	Zwölf
+	EN	twelve
+	ES	las doce
+	FR	douze heures
+	NL	Twaalf
+	SV	tolv
+
+# Override Values based on number of hours and number of minutes
+# Used for values that do not match the standard rules above
+SCREENSAVER_TEXTCLOCK_TIME_0_0
+	DE	Mitternacht
+	EN	Midnight
+	NL	Middernacht
+	ES	medianoche
+	FR	minuit
+	SV	Midnatt
+
+SCREENSAVER_TEXTCLOCK_TIME_12_0
+	DE	Mittag
+	EN	Midday
+	NL	Middag
+	ES	mediodía
+	FR	midi
+	SV	Lunch
+
+SCREENSAVER_TEXTCLOCK_TIME_1_0
+	DE	Ein Uhr
+	EN	SCREENSAVER_TEXTCLOCK_TIME_1_0
+	NL	SCREENSAVER_TEXTCLOCK_TIME_1_0
+	ES	SCREENSAVER_TEXTCLOCK_TIME_1_0
+	FR	SCREENSAVER_TEXTCLOCK_TIME_1_0
+	SV	SCREENSAVER_TEXTCLOCK_TIME_1_0
+
+SCREENSAVER_TEXTCLOCK_TIME_13_0
+	DE	Ein Uhr
+	EN	SCREENSAVER_TEXTCLOCK_TIME_13_0
+	NL	SCREENSAVER_TEXTCLOCK_TIME_13_0
+	ES	SCREENSAVER_TEXTCLOCK_TIME_13_0
+	FR	SCREENSAVER_TEXTCLOCK_TIME_13_0
+	SV	SCREENSAVER_TEXTCLOCK_TIME_13_0

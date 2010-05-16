@@ -109,7 +109,7 @@ SCREENSAVER_TEXTCLOCK_MULTIROW_TIME_0
 	ES	%s
 	FR	%s
 	NL	%s\nuur
-	SV	%s
+	SV	Klockan\när\n%s
 
 SCREENSAVER_TEXTCLOCK_MULTIROW_TIME_5
 	DE	Fünf\nnach\n%s

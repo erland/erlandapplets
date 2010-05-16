@@ -124,13 +124,13 @@ function _tick(self)
 end
 
 function getCustomClockTextTime(self,data,reference,text,sink)
-	local text = nil
+	local result = nil
 	if text and text == "multirow" then
-		text = self:_getTextTime(false)
+		result = self:_getTextTime(false)
 	else
-		text = self:_getTextTime(true)
+		result = self:_getTextTime(true)
 	end
-	sink(reference,text)
+	sink(reference,result)
 end
 
 function _getTextTime(self,singlerow)
